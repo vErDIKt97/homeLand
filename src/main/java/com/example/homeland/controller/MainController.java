@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Map;
+
 
 @Controller
 public class MainController {
@@ -21,8 +23,8 @@ public class MainController {
     }
 
     @GetMapping("/index")
-    public String greetingForm() {
-        return "index";
+    public String greetingForm(Map<String, Object> model) {
+        return "greetings";
     }
 
     @PostMapping("/index")
@@ -32,7 +34,6 @@ public class MainController {
         user.setNickname(userName);
         Iterable<User> users = userRepo.findAll();
         model.addAttribute("user", user);
-
         return "main";
     }
 }

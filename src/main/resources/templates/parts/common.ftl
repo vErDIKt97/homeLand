@@ -1,5 +1,6 @@
+<#macro page>
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,15 +12,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<div class="container">
-    <h1>Войти</h1>
-    <form action="#" th:action="@{/index}" method="post" name="user">
-        <p>Имя пользователя: <input type="text" name="userName"/></p>
-        <p><input type="submit" value="Войти"/> <input type="reset" value="Reset"/></p>
-    </form>
+<#nested>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
             crossorigin="anonymous"></script>
-</div>
 </body>
 </html>
+</#macro>

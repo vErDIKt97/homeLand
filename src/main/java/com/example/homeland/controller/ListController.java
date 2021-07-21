@@ -39,8 +39,10 @@ public class ListController {
         listProd.setListItems(new ArrayList<>());
         listProd.setListName(listName);
         for (int i = 0; i < prodName.size(); i++) {
-            ListItem listItem = new ListItem(prodName.get(i), countRec.get(i), listProd);
-            listProd.getListItems().add(listItem);
+            if ((prodName.get(i)!=null) | (countRec.get(i)!=null)) {
+                ListItem listItem = new ListItem(prodName.get(i), countRec.get(i), listProd);
+                listProd.getListItems().add(listItem);
+            }
         }
         listProdRepo.save(listProd);
         Iterable<ListProd> lists = listProdRepo.findAll();
