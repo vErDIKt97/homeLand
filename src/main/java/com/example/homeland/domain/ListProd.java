@@ -42,4 +42,16 @@ public class ListProd {
         this.listProdItems = listProdItems;
     }
 
+    public boolean checkFill () {
+        int result = 1;
+        for (ListItem listItem :
+                this.getListItems()) {
+            if (listItem.getCountCur() != listItem.getCountRec()) {
+                result = 0;
+                break;
+            }
+        }
+        return result == 1;
+    }
+
 }

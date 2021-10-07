@@ -22,19 +22,29 @@ public class MainController {
         this.listProdRepo = listProdRepo;
     }
 
-    @GetMapping("/index")
+    @GetMapping("/")
     public String greetingForm(Map<String, Object> model) {
         return "greetings";
     }
 
-    @PostMapping("/index")
+    @PostMapping("/login")
     public String greetingSubmit(@RequestParam String userName,
                                  Model model) {
         User user = new User();
-        user.setNickname(userName);
-        Iterable<User> users = userRepo.findAll();
+        user.setUsername(userName);
         model.addAttribute("user", user);
         return "main";
     }
+    @GetMapping("/main")
+    public String mainForm (Map <String ,Object> users) {
+
+        return "main";
+    }
+
+    @GetMapping("/login")
+    public String loginForm () {
+        return "login";
+    }
+
 }
 

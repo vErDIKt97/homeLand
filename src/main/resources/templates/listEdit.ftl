@@ -1,13 +1,10 @@
 <#import "parts/common.ftl" as c>
+<#include "parts/security.ftl">
 <@c.page>
-    <div class="row">
-        <h1>Создание нового списка</h1>
-        <form class="col-8" action="/createList" name="items" method="post">
-            <#include "parts/listEditPrt.ftl">
-            <br>
-            <input type="submit" class="btn btn-success my-2" value="Создать"/>
-        </form>
-    </div>
+    <form method="post" action="/listSave/${list.getId()}">
+    <#include "parts/listEditPrt.ftl">
+        <input type="submit" class="btn btn-success my-2" value="Сохранить"/>
+    </form>
     <script>
         function addRow() {
             let tableBody = document.getElementById("tableBody");

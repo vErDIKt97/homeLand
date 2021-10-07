@@ -1,10 +1,5 @@
 <#import "parts/common.ftl" as c>
+<#include "parts/security.ftl">
 <@c.page>
-<div class="container">
-    <h1>Войти</h1>
-    <form action="/index" method="post" name="user">
-        <p>Имя пользователя: <input type="text" name="userName"/></p>
-        <p><input type="submit" value="Войти"/> <input type="reset" value="Reset"/></p>
-    </form>
-</div>
+    <h1>Добро пожаловать, ${name}!</h1>
 </@c.page>
