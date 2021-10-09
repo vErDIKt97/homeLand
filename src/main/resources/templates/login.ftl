@@ -1,3 +1,4 @@
+<!--Страница входа-->
 <#import "parts/common.ftl" as a>
     <#import "parts/login.ftl" as c>
 <@a.page>

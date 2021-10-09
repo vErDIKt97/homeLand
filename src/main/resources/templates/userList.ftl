@@ -1,3 +1,4 @@
+<!--Страница со списком всех пользователей которые уже есть в базе-->
 <#import "parts/common.ftl" as c>
 <@c.page>
     <table class="table align-middle">

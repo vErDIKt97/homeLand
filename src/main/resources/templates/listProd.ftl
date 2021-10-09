@@ -1,3 +1,4 @@
+<!--Страница заполнения списка-->
 <#import "parts/common.ftl" as c>
 <@c.page>
     <div class="row">

@@ -1,3 +1,4 @@
+<!--Основной шаблон, используется  на всех страницах-->
 <#macro page>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +14,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
+<!--Навигационная панель будет на каждой странице-->
 <#include "navbar.ftl">
 
 <div class="container mt-5">

@@ -1,3 +1,4 @@
+<!--Шаблон формы регистрации/входа-->
 <#macro login path>
     <form class="needs-validation" action="${path}" method="post" name="user">
         <div class="row">

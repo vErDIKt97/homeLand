@@ -19,6 +19,7 @@ public class RegistrationController {
     }
 
     @PostMapping("/registration")
+    //регистрация нового пользователя
     public String addUser(User user,
                           Map<String, Object> model) {
         User userFromDB = userRepo.findByUsername(user.getUsername());

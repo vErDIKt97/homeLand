@@ -1,7 +1,8 @@
+<!--Страница просмотра списков-->
 <#import "parts/common.ftl" as c>
 <@c.page>
     <div class="col-6">
-
+        <!--Проверяем есть ли уже списки в базе, если есть выводим на экран, если нет то сообщаем что список нет-->
         <#if lists??>
             <table class="table">
                 <caption class="caption-top">Списки продуктов</caption>
@@ -13,6 +14,7 @@
                 </tr>
                 </thead>
                 <tbody>
+                <!--Для каждого списка из всех выводим их данные-->
                 <#list lists as list>
                     <tr>
                         <td>
@@ -24,6 +26,7 @@
                             </form>
                         </td>
                         <td>
+                            <!--Если список заполнен показываем это иконкой, если нет - другой иконкой-->
                             <#if list.checkFill()>
                             <i class="bi bi-check-square-fill" style="font-size: 150%; color: green"></i>
                             <#else> <i class="bi bi-x-square-fill" style="font-size: 150%; color: red"></i>

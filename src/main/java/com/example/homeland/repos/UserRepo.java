@@ -5,5 +5,6 @@ import com.example.homeland.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepo extends JpaRepository<User,Long> {
+    //Поиск пользователя по имени
     User findByUsername(String userName);
 }

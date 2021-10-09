@@ -1,3 +1,4 @@
+<!--Шаблон для редактирования/заполнения листа-->
 <div class="row">
     <div class="col-4">
         <label class="form-label" for="listName">Название списка:</label>

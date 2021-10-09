@@ -42,6 +42,7 @@ public class ListProd {
         this.listProdItems = listProdItems;
     }
 
+    //проверка листа на заполненность - все ли пункты меню "куплены"
     public boolean checkFill () {
         int result = 1;
         for (ListItem listItem :

@@ -1,3 +1,4 @@
+<!--Страница создания списка-->
 <#import "parts/common.ftl" as c>
 <@c.page>
     <div class="row">
@@ -8,6 +9,7 @@
             <input type="submit" class="btn btn-success my-2" value="Создать"/>
         </form>
     </div>
+    <!--Скрипт работы кнопики по добавлению дополнительной строки в списке-->
     <script>
         function addRow() {
             let tableBody = document.getElementById("tableBody");
@@ -34,6 +36,7 @@
             tableBody.appendChild(newRow);
         }
     </script>
+    <!--Скрипт удаления строки из списка-->
     <script>
         function deleteRow(e) {
             let ell = e.parentElement.parentElement;

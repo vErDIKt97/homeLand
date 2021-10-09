@@ -25,6 +25,7 @@ public class UserController {
     }
 
     @GetMapping("userList")
+    //при переходе на страницу отправляем всех пользователей которые есть в базе
     public String userListForm (Map<String , Object> model) {
         List<User> userList = userRepo.findAll();
         model.put("userList",userList);
@@ -32,6 +33,7 @@ public class UserController {
     }
 
     @GetMapping("/user/{user}")
+    //при редактировании пользователя передаем текущие данные пользователя
     public String userEditForm (@PathVariable User user, Model model) {
         model.addAttribute("user", user);
         model.addAttribute("roles", Role.values());
@@ -40,6 +42,7 @@ public class UserController {
     }
 
     @PostMapping("/user")
+    //сохраняем пользователя
     public String saveUserEdit (
             @RequestParam String username,
             @RequestParam Map<String, String> form,
